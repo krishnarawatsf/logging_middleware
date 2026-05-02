@@ -60,8 +60,7 @@ Log levels: debug, info, warn, error, fatal
 Packages: api, component, auth, config, middleware, utils, etc.
 
 ## Important
-
-⚠️ Registration is ONE-TIME ONLY
+ Registration is ONE-TIME ONLY
 
 Save ClientID and ClientSecret immediately. Cannot get again.
 
