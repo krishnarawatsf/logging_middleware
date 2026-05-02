@@ -33,6 +33,10 @@ App opens at http://localhost:5173
 5. Click Authenticate
 6. Create notification
 
+## Frontend Interface
+
+![Frontend Interface](./Frontend_interface.jpg)
+
 ### Backend (Optional)
 
 ```bash
