@@ -1,72 +1,62 @@
-# AFFORDMED - Notification System
+# logging_middleware
+Lightweight TypeScript logging & notification middleware for Node services with a Vite React admin UI.
 
-Notification app with React frontend and logging system.
+## One-line
+Structured logging middleware with pluggable notification hooks (Slack, email, webhooks).
 
-## Folders
+## Problem
+Observability gaps and noisy alerting make it hard for product teams to act on runtime issues. This project centralizes structured logs and provides actionable notification hooks.
 
-```
-AFFORDMED/
-├── logging middleware/    - Logger package
-├── notification_app_fe/   - React app (frontend)
-├── notification_app_be/   - Express server (backend)
-├── notification_system_design.md
-└── .gitignore
-```
+## Features
+- Pluggable middleware for Express/Koa
+- Structured JSON logs (severity, request-id, user)
+- Notification adapters: Slack, email, webhook
+- Frontend admin (React + Vite) to view alerts and metadata
+- Docker Compose demo for local testing
 
-## How to Run
-
-### Frontend
-
+## Quickstart
 ```bash
-cd notification_app_fe
+# server
+cd server
+npm install
+npm run dev
+
+# frontend
+cd ../frontend
 npm install
 npm run dev
 ```
 
-App opens at http://localhost:5173
-
-**Steps:**
-1. Fill form (email, name, mobile, GitHub username)
-2. Roll number: RA2311030010088
-3. Access code: QkbpxH
-4. Click Register → save ClientID and ClientSecret
-5. Click Authenticate
-6. Create notification
-
-## Frontend Interface
-
-![Frontend Interface](./Frontend_interface.jpg)
-
-### Backend (Optional)
-
+Or run full demo with Docker Compose:
 ```bash
-cd notification_app_be
-npm install
-npm run dev
+docker compose up -d
 ```
 
-Server at http://localhost:3000
+## Usage
+Example Express integration:
+```ts
+import { loggingMiddleware } from 'logging-middleware'
+app.use(loggingMiddleware({ notify: true }))
+```
 
-## API Endpoints
+## Architecture
+- `server/` — Node service exposing API and middleware
+- `frontend/` — Vite React admin UI
+- `notify/` — adapters for Slack, Email, Webhook
 
-**Register** - POST http://20.207.122.201/evaluation-service/register
+## Tests & CI
+- Run unit tests: `npm test`
+- CI: GitHub Actions `lint`, `test`, `build` (suggested)
 
-**Auth** - POST http://20.207.122.201/evaluation-service/auth
+## Roadmap
+- Add E2E tests and Docker Compose smoke test
+- Add sample metrics and Grafana dashboard
+- Publish npm package for middleware
 
-**Logs** - POST http://20.107.122.201/evaluation-service/logs
+## Contributing
+1. Fork the repo
+2. Create feature branch
+3. Run tests and open a PR
 
-## Logger
-
-Logger is in `logging middleware/logger.ts`
-
-Log levels: debug, info, warn, error, fatal
-
-Packages: api, component, auth, config, middleware, utils, etc.
-
-## Important
- Registration is ONE-TIME ONLY
-
-Save ClientID and ClientSecret immediately. Cannot get again.
-
-Roll No: RA2311030010088
-Access Code: QkbpxH
+## License
+MIT
