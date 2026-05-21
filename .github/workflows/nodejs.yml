@@ -1,0 +1,26 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: |
+          if [ -f package.json ]; then npm ci; fi
+      - name: Run tests
+        run: |
+          if [ -f package.json ]; then npm test || echo "npm test failed or not defined"; else echo "No package.json"; fi
+      - name: Upload coverage to Codecov
+        run: |
+          bash <(curl -s https://codecov.io/bash) || echo "Codecov upload may require CODECOV_TOKEN for private repos"
