@@ -1,3 +1,9 @@
+[![CI](https://github.com/krishnarawatsf/logging_middleware/actions/workflows/nodejs.yml/badge.svg)](https://github.com/krishnarawatsf/logging_middleware/actions)
+[![License](https://img.shields.io/github/license/krishnarawatsf/logging_middleware.svg)](https://github.com/krishnarawatsf/logging_middleware/blob/main/LICENSE)
+[![GitHub release](https://img.shields.io/github/v/release/krishnarawatsf/logging_middleware.svg)](https://github.com/krishnarawatsf/logging_middleware/releases)
+[![codecov](https://codecov.io/gh/krishnarawatsf/logging_middleware/branch/main/graph/badge.svg)](https://codecov.io/gh/krishnarawatsf/logging_middleware)
+[![Dependabot status](https://img.shields.io/github/dependabot/krishnarawatsf/logging_middleware.svg)](https://github.com/krishnarawatsf/logging_middleware/network/alerts)
+
 # logging_middleware
 Lightweight TypeScript logging & notification middleware for Node services with a Vite React admin UI.
 
