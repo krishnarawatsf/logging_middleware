@@ -4,7 +4,7 @@
 [![codecov](https://codecov.io/gh/krishnarawatsf/logging_middleware/branch/main/graph/badge.svg)](https://codecov.io/gh/krishnarawatsf/logging_middleware)
 [![Dependabot status](https://img.shields.io/github/dependabot/krishnarawatsf/logging_middleware.svg)](https://github.com/krishnarawatsf/logging_middleware/network/alerts)
 
-# AFFORDMED - Notification System
+
 
 Notification app with React frontend and logging system.
 
@@ -33,8 +33,8 @@ App opens at http://localhost:5173
 
 **Steps:**
 1. Fill form (email, name, mobile, GitHub username)
-2. Roll number: RA2311030010088
-3. Access code: QkbpxH
+2. Roll number: 
+3. Access code: 
 4. Click Register → save ClientID and ClientSecret
 5. Click Authenticate
 6. Create notification
