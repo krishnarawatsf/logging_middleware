@@ -76,3 +76,6 @@ Save ClientID and ClientSecret immediately. Cannot get again.
 
 Roll No: RA2311030010088
 Access Code: QkbpxH
+
+## Contributing
+Thanks for checking out this project — to contribute, open an issue describing the change, then submit a PR with tests where applicable. See `CONTRIBUTING.md` for more.
